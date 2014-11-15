@@ -1,1 +1,21 @@
-nothing
+<div class="row">
+  <div class="col-md-span6">
+    <h1>RubyWarrior Scoreboard of Awesomeness</h1>
+  </div>
+
+  <div id="results" class="col-md-span6">
+    <table class="table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th>#</th>
+          <% min_level.upto(max_level) do |level| %>
+            <th>Level <%= level %></th>
+          <% end %>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render @warriors %>
+      </tbody>
+    </table>
+  </div>
+</div>

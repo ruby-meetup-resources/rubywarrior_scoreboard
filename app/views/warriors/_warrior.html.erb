@@ -1,0 +1,6 @@
+<tr>
+  <td><%= warrior.name %></td>
+  <% warrior.scores.order(:level_number).each do |score| %>
+    <td><%= score.total_score || 0 %></td>
+  <% end %>
+</tr>
