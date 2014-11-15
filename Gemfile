@@ -28,11 +28,11 @@ group :production do
 end
 
 group :development do
-  gem 'pry-rails'
   gem 'better_errors'
 end
 
 group :development, :test do
+  gem 'pry-rails'
   gem "rspec-rails", "~> 2.0"
 end
 # To use ActiveModel has_secure_password
