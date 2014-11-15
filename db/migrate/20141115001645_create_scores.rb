@@ -6,7 +6,7 @@ class CreateScores < ActiveRecord::Migration
       t.integer :level_score, null: false
       t.integer :time_bonus, null: false
       t.integer :clear_bonus
-      t.integer :total_score
+      t.string :total_score
 
       t.timestamps
     end

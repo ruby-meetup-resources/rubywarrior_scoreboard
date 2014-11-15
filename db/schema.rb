@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(:version => 20141115001645) do
     t.integer  "level_score",  :null => false
     t.integer  "time_bonus",   :null => false
     t.integer  "clear_bonus"
-    t.integer  "total_score"
+    t.string   "total_score"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
   end
