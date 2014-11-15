@@ -1,25 +1,8 @@
 @import "variables";
 @import "bootstrap";
-@import "errors";
 
 body {
   padding-top: 50px;
   padding-bottom: 70px;
   background: image_url('bg_pattern.png');
-}
-
-fieldset {
-  margin-bottom: 40px;
-}
-
-#specific-days {
-  display: none;
-}
-
-img {
-  max-width: 100%;
-}
-
-.initially_hidden, .hidden {
-  display: none;
 }
