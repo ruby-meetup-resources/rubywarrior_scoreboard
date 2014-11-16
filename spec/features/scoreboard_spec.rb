@@ -13,4 +13,9 @@ describe "Scoreboard" do
     visit score_path(score)
     page.should have_content("Score for #{score.warrior.name} for level #{ score.level_number }")
   end
+
+  it "Should display the source code" do
+    visit score_path(score)
+    page.should have_content(score.source_code)
+  end
 end
