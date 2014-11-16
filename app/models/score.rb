@@ -1,5 +1,7 @@
 class Score < ActiveRecord::Base
   belongs_to :warrior
-  validates_presence_of :warrior
   attr_accessible :clear_bonus, :level_number, :level_score, :time_bonus, :total_score
+
+  validates_presence_of :warrior
+  validates_numericality_of :level_number, greater_than_or_equal_to: 1, presence: true
 end

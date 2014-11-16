@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-md-6">
+    <h1>Score for <%= @score.warrior.name %> for level <%= @score.level_number %></h1>
+  </div>
+</div>
+<div class="row">
+  <div id="result" class="col-md-6">
+    <table class="table table-bordered table-striped">
+      <% %w[level_score clear_bonus time_bonus].each do |col| %>
+        <% if value = @score.send(col).presence %>
+          <tr>
+            <td><%= col.humanize.capitalize %></td>
+            <td><%= value %></td>
+          </tr>
+        <% end %>
+      <% end %>
+    </table>
+  </div>
+</div>

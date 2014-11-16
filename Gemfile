@@ -23,6 +23,10 @@ group :development do
 end
 
 group :development, :test do
+  gem 'factory_girl_rails', "~> 4.5"
   gem 'pry-rails'
   gem "rspec-rails", "~> 2.0"
+  gem "capybara", "~> 2.0"
+  gem "poltergeist"
+  gem "database_cleaner"
 end
