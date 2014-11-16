@@ -12,4 +12,12 @@ describe Score do
     score.valid?
     expect(score.errors[:level_number].size).to eq(1)
   end
+
+  context "valid" do
+    let(:score) { FactoryGirl.build(:score) }
+
+    it "must give the combined score" do
+      expect(score.combined_score).to eq(50)
+    end
+  end
 end

@@ -6,7 +6,7 @@ describe "Scoreboard" do
   it "Should display a warrior and scores on the homepage" do
     visit root_path
     page.should_not have_content('Level 2')
-    page.should have_link(score.level_score)
+    page.should have_link(score.combined_score)
   end
 
   it "Should display full details for a particular score" do
