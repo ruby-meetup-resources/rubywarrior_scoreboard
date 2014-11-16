@@ -17,10 +17,7 @@ class ScoresController < ApplicationController
     score.total_score = total_score
     score.level_score = level_score
 
-    if score.save
-      head :ok
-    else
-      head :error
-    end
+    score.save
+    respond_with score, location: nil
   end
 end
