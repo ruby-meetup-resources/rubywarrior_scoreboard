@@ -15,6 +15,8 @@ end
 
 gem "jquery-rails", "< 3.0.0"
 
+gem "flog"
+
 group :production do
   gem 'rails_12factor'
 end

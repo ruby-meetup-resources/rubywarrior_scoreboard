@@ -5,7 +5,7 @@
 </div>
 <div class="row">
   <div id="result" class="col-md-6">
-    <table class="table table-bordered table-striped">
+    <table class="table table-narrow table-bordered table-striped">
       <% %w[level_score clear_bonus time_bonus].each do |col| %>
         <% if value = @score.send(col).presence %>
           <tr>
@@ -17,16 +17,21 @@
     </table>
   </div>
 </div>
-<div class="row">
-  <div id="source_code" class="col-md-12">
-    <pre class="brush: ror">
-      <%= @score.source_code %>
-    </pre>
-  </div>
-</div>
 
-<%= javascript_tag do %>
-  $(document).ready(function(){
-    SyntaxHighlighter.all();
-  });
+<% if @score.source_code.present? %>
+  <div class="row">
+    <div id="source_code" class="col-md-12">
+      <pre class="brush: ror">
+        <%= @score.source_code %>
+      </pre>
+    </div>
+  </div>
+  <%= render 'flog_details' %>
+
+  <%= javascript_tag do %>
+    $(document).ready(function(){
+      SyntaxHighlighter.all();
+    });
+  <% end %>
 <% end %>
+

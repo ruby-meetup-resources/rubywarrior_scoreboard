@@ -1,0 +1,17 @@
+<div class="row">
+  <div id="flog" class="col-md-6">
+    <h2>Flog information</h2>
+    <table class="table-narrow table table-bordered table-striped">
+      <% @flog_score[0].each do |key, value| %>
+        <tr>
+          <td><%= key %></td>
+          <td><%= value %></td>
+        </tr>
+      <% end %>
+      <tr>
+        <td>Total score</td>
+        <td><%= @flog_score[1] %></td>
+      </tr>
+    </table>
+  </div>
+</div>

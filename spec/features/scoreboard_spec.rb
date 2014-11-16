@@ -18,4 +18,10 @@ describe "Scoreboard" do
     visit score_path(score)
     page.should have_content(score.source_code)
   end
+
+  it "Should display the flog score" do
+    visit score_path(score)
+    page.should have_content("Player#play_turn")
+    page.should have_content("Total score")
+  end
 end

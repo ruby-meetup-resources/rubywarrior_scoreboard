@@ -10,6 +10,9 @@ class ScoresController < ApplicationController
 
   def show
     @score = Score.find(params[:id])
+    if @score.source_code.present?
+      @flog_score = Flog.new.flog_rubywarrior_code(@score.source_code || "")
+    end
     respond_with @score
   end
 end
