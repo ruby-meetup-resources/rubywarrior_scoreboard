@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141115001645) do
+ActiveRecord::Schema.define(:version => 20141116045812) do
 
   create_table "scores", :force => true do |t|
     t.integer  "warrior_id",   :null => false
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(:version => 20141115001645) do
     t.string   "total_score"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
+    t.text     "source_code"
   end
 
   create_table "warriors", :force => true do |t|

@@ -8,6 +8,7 @@ describe 'POST /scores.json' do
       "level_number": 1,
       "level_score": 10,
       "total_score": 10,
+      "source_code": "class Test",
       "time_bonus": 0
     }
     JSON
@@ -17,6 +18,7 @@ describe 'POST /scores.json' do
       "level_number" => 1,
       "level_score" => 10,
       "time_bonus" => 0,
+      "source_code" => "class Test",
       "total_score" => 10,
     })
     expect(json_response['warrior_id']).to be_a Numeric

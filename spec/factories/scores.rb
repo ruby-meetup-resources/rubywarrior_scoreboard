@@ -6,5 +6,6 @@ FactoryGirl.define do
     total_score "100 + 10 + 10 + 30 = 150"
     level_score 30
     level_number 1
+    source_code "class Test\n  def something\n end"
   end
 end

@@ -8,12 +8,13 @@ module ScoreBuilder
     warrior = Warrior.find_or_initialize_by_name(warrior_name)
     score = warrior.scores.find_or_initialize_by_level_number(level_number)
     score.warrior = warrior
-    score.assign_attributes params.slice *[
+    score.assign_attributes params.slice(*[
       :time_bonus,
       :clear_bonus,
       :total_score,
       :level_score,
-    ]
+      :source_code,
+    ])
     score.clear_bonus ||= 0
     score
   end
