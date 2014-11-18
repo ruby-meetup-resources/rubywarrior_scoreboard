@@ -1,6 +1,8 @@
 <tr>
   <td><%= warrior.name %></td>
-  <% warrior.scores.order(:level_number).each do |score| %>
+  <% warrior.scores.order(:level_number).each_with_index do |score, index| %>
+    <%= print_catchup_cells(score) if index == 0 %>
     <td><%= link_to(score.combined_score || 0, score) %></td>
+    <%= print_following_cells(score, index) if index == warrior.scores.size - 1 %>
   <% end %>
 </tr>
