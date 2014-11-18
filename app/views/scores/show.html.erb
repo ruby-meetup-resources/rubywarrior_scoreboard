@@ -18,7 +18,7 @@
   </div>
 </div>
 
-<% if @score.source_code.present? %>
+<% if @score.source_code.present? && !ENV['HIDE_SOURCE'] %>
   <div class="row">
     <div id="source_code" class="col-md-12">
       <pre class="brush: ror">
@@ -26,7 +26,6 @@
       </pre>
     </div>
   </div>
-  <%= render 'flog_details' %>
 
   <%= javascript_tag do %>
     $(document).ready(function(){
@@ -35,3 +34,6 @@
   <% end %>
 <% end %>
 
+<% if @score.source_code.present? && !ENV['HIDE_FLOG'] %>
+  <%= render 'flog_details' %>
+<% end %>
