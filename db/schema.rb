@@ -11,18 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141116045812) do
+ActiveRecord::Schema.define(:version => 20141121230045) do
 
   create_table "scores", :force => true do |t|
-    t.integer  "warrior_id",   :null => false
-    t.integer  "level_number", :null => false
-    t.integer  "level_score",  :null => false
-    t.integer  "time_bonus",   :null => false
+    t.integer  "warrior_id",                           :null => false
+    t.integer  "level_number",                         :null => false
+    t.integer  "level_score",                          :null => false
+    t.integer  "time_bonus",                           :null => false
     t.integer  "clear_bonus"
     t.string   "total_score"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",                           :null => false
+    t.datetime "updated_at",                           :null => false
     t.text     "source_code"
+    t.string   "tower",        :default => "beginner", :null => false
   end
 
   create_table "warriors", :force => true do |t|
