@@ -12,6 +12,7 @@ module ScoreBuilder
       :time_bonus,
       :clear_bonus,
       :total_score,
+      :tower,
       :level_score,
       :source_code,
     ])
