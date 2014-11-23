@@ -12,8 +12,12 @@ Basic API call
       "source_code": "class Player ... end",
       "time_bonus": 0
     }
-    
-    
+
+## scoreboard_rubywarrior gem
+Please use the scoreboard_rubywarrior gem in conjunction
+with this website.  It will automatically post results to
+the endpoint you specify
+
 ### ENV variables
 
 * If the `HIDE_SOURCE` ENV variable is present, source code will be hidden
