@@ -13,10 +13,17 @@ Basic API call
       "time_bonus": 0
     }
 
+## Demo website
+
+The default endpoint, and example site, is available at:
+http://rubywarrior.herokuapp.com/
+
 ## scoreboard_rubywarrior gem
+
 Please use the scoreboard_rubywarrior gem in conjunction
 with this website.  It will automatically post results to
 the endpoint you specify
+
 
 ### ENV variables
 
