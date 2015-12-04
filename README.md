@@ -33,7 +33,3 @@ the endpoint you specify
 ## Thanks
 
 Many many thanks to Ryan Bates for creating the ruby-warrior gem.
-
-If you feel like saying more.. click the image below ;)
-
-[![Thank the developer](https://raw.githubusercontent.com/thankadeveloper/thankadeveloper/master/app/assets/images/badge.png)](http:/thankadeveloper.org?repo=ruby-meetup-resources/scoreboard_rubywarrior)
